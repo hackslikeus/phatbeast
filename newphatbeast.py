@@ -97,9 +97,9 @@ HTML_PAGE = """
     <div class="w3-card w3-container" style="min-height:250px">
       <h4>Player Controls</h4><br>
       <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i><br>
-      <a class="w3-button w3-theme" onclick="control('prev')">⏪PREV</a>
-      <a class="w3-button w3-theme" onclick="control('toggle')">PLAY>⏯PAUSE</a>
-      <a class="w3-button w3-theme" onclick="control('next')">⏩NEXT</a>
+      <a class="w3-button w3-theme w3-hover-light-grey" onclick="control('prev')">⏪PREV</a>
+      <a class="w3-button w3-theme w3-hover-light-grey"" onclick="control('toggle')">PLAY>⏯PAUSE</a>
+      <a class="w3-button w3-theme w3-hover-light-gray"" onclick="control('next')">⏩NEXT</a>
     </div>
   </div>
 
@@ -107,8 +107,8 @@ HTML_PAGE = """
     <div class="w3-card w3-container" style="min-height:250px">
       <h4>Volume Controls</h4><br>
       <i class="fa fa-volume-up w3-margin-bottom w3-text-theme" style="font-size:120px"></i><br>
-      <a class="w3-button w3-theme" onclick="control('vol_down')">🔉 Volume -10</a>
-      <a class="w3-button w3-theme" onclick="control('vol_up')">🔊 Volume +10</a>
+      <a class="w3-button w3-theme w3-hover-dark-gray"" onclick="control('vol_down')">🔉 Volume -10</a>
+      <a class="w3-button w3-theme w3-hover-light-gray"" onclick="control('vol_up')">🔊 Volume +10</a>
     </div>
   </div>
 </div>

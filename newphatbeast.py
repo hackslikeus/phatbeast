@@ -76,7 +76,7 @@ HTML_PAGE = """
             </div>
           </div>
                <!--Item Pickers -->
-            <div class="w3-half w3-container-fluid w-3-dark-gray">
+            <div class="w3-half w3-container-fluid w3-dark-gray">
        <div class="picker-box">
             <label for="itemBox">Playlist Items</label>
             <select id="itemBox" size="8"></select>

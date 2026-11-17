@@ -115,7 +115,7 @@ HTML_PAGE = """
 
 <!-- Footer (Power Modal Removed) -->
 <hr>
-<footer class="w3-container w3-theme-dark w3-padding-12 fixed-bottom">
+<footer class="w3-container w3-theme-dark w3-padding-12 w3-bottom">
     <div class="w3-center">
     <div id="status"></div>
     <!-- Live MPD status (refreshed every 15 seconds) -->

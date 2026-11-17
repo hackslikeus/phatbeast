@@ -62,7 +62,7 @@ HTML_PAGE = """
     <h4 class="w3-xxxlarge w3-animate-bottom">A PI PLAYLIST PLAYER</h4>
       <div class="w3-padding-32">
       <div class="w3-row w3-border">
-        <div class="w3-half w3-container-fluid w3-red">
+        <div class="w3-half w3-container-fluid w3-light-gray">
           <!-- Playlist and Item Pickers -->
           <div class="picker-area">
             <div class="picker-box">
@@ -76,7 +76,7 @@ HTML_PAGE = """
             </div>
           </div>
                <!--Item Pickers -->
-            <div class="w3-half w3-container-fluid">
+            <div class="w3-half w3-container-fluid w-3-dark-gray">
        <div class="picker-box">
             <label for="itemBox">Playlist Items</label>
             <select id="itemBox" size="8"></select>

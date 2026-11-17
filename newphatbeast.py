@@ -94,7 +94,7 @@ HTML_PAGE = """
 
 <div class="w3-grid w3-center w3-margin-top w3-padding" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
   <div>
-    <div class="w3-card w3-container" style="min-height:240px">
+    <div class="w3-card w3-container" style="min-height:250px">
       <h4>Player Controls</h4><br>
       <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <a class="w3-button w3-theme" onclick="control('prev')">⏪PREV</a>
@@ -104,7 +104,7 @@ HTML_PAGE = """
   </div>
 
   <div>
-    <div class="w3-card w3-container" style="min-height:240px">
+    <div class="w3-card w3-container" style="min-height:250px">
       <h4>Volume Controls</h4><br>
       <i class="fa fa-volume-up w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <a class="w3-button w3-theme" onclick="control('vol_down')">🔉 Volume -10</a>
@@ -114,14 +114,14 @@ HTML_PAGE = """
 </div>
 
 <!-- Footer (Power Modal Removed) -->
+<hr>
 <footer class="w3-container w3-theme-dark w3-padding-12 fixed-bottom">
     <div class="w3-center">
     <div id="status"></div>
     <!-- Live MPD status (refreshed every 15 seconds) -->
     <div id="mpdStatus">Checking MPD status...</div>
     <br>
-    <hr>
-  <h4 class="w3-center">Status</h4>
+   <h4 class="w3-center">Status</h4>
   <br>
   </div>
 

@@ -22,11 +22,11 @@ HTML_PAGE = """
 </head>
 <body>
 
-<!-- Slide-in Sidebar Navigation (Hidden by default) -->
+<!-- Slide-in Sidebar Navigation (Hidden in Hamburger by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left w3-theme-d2" style="display:none;z-index:4;width:280px;max-width:80%;" id="mySidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-theme-l1 w3-right-align">Close &times;</button>
   
-  <div class="w3-container w3-padding-16">
+  <div class="w3-container w3-padding-12">
     <h4><i class="fa fa-power-off"></i> System Power</h4>
     <p class="w3-small">Select an action for audio playing Pi:</p>
     
@@ -58,7 +58,7 @@ HTML_PAGE = """
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
   <div class="w3-center">
-    <h4>BEAUTIFUL PhatBeatiful</h4>
+    <h4>PhatBeatiful</h4>
     <h4 class="w3-xxxlarge w3-animate-bottom">A PI PLAYLIST PLAYER</h4>
       <div class="w3-padding-32">
       <div class="w3-row w3-border">
@@ -79,7 +79,7 @@ HTML_PAGE = """
             <div class="w3-half w3-container-fluid">
        <div class="picker-box">
             <label for="itemBox">Playlist Items</label>
-            <select id="itemBox" size="10"></select>
+            <select id="itemBox" size="8"></select>
              </div>
       </div>
         </div>
@@ -94,10 +94,9 @@ HTML_PAGE = """
 
 <div class="w3-grid w3-center w3-margin-top w3-padding" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
   <div>
-    <div class="w3-card w3-container" style="min-height:260px">
-      <h3>Player Controls</h3><br>
+    <div class="w3-card w3-container" style="min-height:240px">
+      <h4>Player Controls</h4><br>
       <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-      <p>Navigate Playlist using below</p>
       <a class="w3-button w3-theme" onclick="control('prev')">⏪PREV</a>
       <a class="w3-button w3-theme" onclick="control('toggle')">PLAY>⏯PAUSE</a>
       <a class="w3-button w3-theme" onclick="control('next')">⏩NEXT</a>
@@ -105,10 +104,9 @@ HTML_PAGE = """
   </div>
 
   <div>
-    <div class="w3-card w3-container" style="min-height:260px">
-      <h3>Volume Controls</h3><br>
+    <div class="w3-card w3-container" style="min-height:240px">
+      <h4>Volume Controls</h4><br>
       <i class="fa fa-volume-up w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-      <p>Use below to control Volume</p>
       <a class="w3-button w3-theme" onclick="control('vol_down')">🔉 Volume -10</a>
       <a class="w3-button w3-theme" onclick="control('vol_up')">🔊 Volume +10</a>
     </div>
@@ -117,14 +115,14 @@ HTML_PAGE = """
 
 <!-- Footer (Power Modal Removed) -->
 <footer class="w3-container w3-theme-dark w3-padding-12 fixed-bottom">
-  <hr>
-  <h4 class="w3-center">Status</h4>
-  <br>
-  <div class="w3-center">
+    <div class="w3-center">
     <div id="status"></div>
     <!-- Live MPD status (refreshed every 15 seconds) -->
     <div id="mpdStatus">Checking MPD status...</div>
-    <br><br>
+    <br>
+    <hr>
+  <h4 class="w3-center">Status</h4>
+  <br>
   </div>
 
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
@@ -230,7 +228,6 @@ HTML_PAGE = """
 # Simple one-shot commands (existing buttons)
 SIMPLE_COMMANDS = {
   "prev": ["mpc", "prev"],
- # "previous": ["mpc", "previous"],
   "next": ["mpc", "next"],
   "toggle": ["mpc", "toggle"],
   "vol_up": ["mpc", "volume", "+10"],
@@ -352,11 +349,9 @@ def reboot_pi():
     subprocess.Popen(['sudo', 'reboot', 'now'])
     return "Rebooting Raspberry Pi..."
 
-# --- GK Paste your existing MPD routes (/, /api/status, /api/playlist_items, /control/<action>) here ---
-
 if __name__ == "__main__":
   # Start Flask wrapped in Tornado WSGI container use port 5000 for testing 8080 otherwise
   http_server = HTTPServer(WSGIContainer(app))
-  http_server.listen(8081)
-  print("Tornado server started. Access via http://<dietpi-ip>:8081")
+  http_server.listen(5000)
+  print("Tornado server started. Access via http://<dietpi-ip>:5000")
   IOLoop.instance().start()

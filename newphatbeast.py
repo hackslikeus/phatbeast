@@ -59,7 +59,7 @@ HTML_PAGE = """
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
   <div class="w3-center">
     <h4>PhatBeatiful</h4>
-    <h4 class="w3-xxxlarge w3-animate-bottom">A PI PLAYLIST PLAYER</h4>
+    <h6 class="w3-xxxlarge w3-animate-bottom">A PI PLAYLIST PLAYER</h6>
       <div class="w3-padding-32">
       <div class="w3-row w3-border">
         <div class="w3-half w3-container-fluid w3-light-gray">

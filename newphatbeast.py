@@ -87,8 +87,8 @@ HTML_PAGE = """
       </div>
             
       <br>
-      <button class="w3-btn w3-xlarge w3-light-grey w3-hover-dark-grey" onclick="loadSelection()">📂 Clear &amp; Load Playlist</button>
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="playSelection()" style="font-weight:900;">▶ PLAY SELECTION</button>
+      <button class="w3-btn w3-large w3-light-grey w3-hover-dark-grey" onclick="loadSelection()">📂 Clear &amp; Load Playlist</button>
+      <button class="w3-btn w3-large w3-dark-grey w3-hover-light-grey" onclick="playSelection()" style="font-weight:900;">▶ PLAY SELECTION</button>
     </div>
   </header>
 

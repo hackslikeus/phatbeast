@@ -121,10 +121,7 @@ HTML_PAGE = """
     <div id="status"></div>
     <!-- Live MPD status (refreshed every 15 seconds) -->
     <div id="mpdStatus">Checking MPD status...</div>
-    <br>
-   <h4 class="w3-center">Status</h4>
-  <br>
-  </div>
+   </div>
 
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
